@@ -2,3 +2,11 @@ node_modules/
 package-lock.json
 package.json
 extract.js
+render.js
+extractimg.js
+layout.js
+mapimages.js
+genplaceholders.js
+checkimages.js
+pdf_images/
+pdf_pages/

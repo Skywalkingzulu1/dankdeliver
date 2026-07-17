@@ -1,18 +1,10 @@
 const state = { category: "all", search: "", cart: {} };
 
-const ICONS = {
-  Greenhouse: "🌿",
-  Indoor: "💎",
-  Edibles: "🍬",
-  CBD: "💧",
-};
-
 function fmt(n) {
   return "R" + n.toLocaleString("en-ZA", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
 function cardHTML(p) {
-  const icon = ICONS[p.tag] || "🌿";
   const metaClass = p.tag === "CBD" ? "card-meta cbd" : "card-meta";
   const metaText = p.tag === "CBD" ? "CBD Wellness" : p.type;
   const thcText = `${p.thc}${p.pack ? " · " + p.pack : ""}`;
@@ -20,13 +12,14 @@ function cardHTML(p) {
     ? `<div class="price">${fmt(p.price)}</div>`
     : `<div class="price">${fmt(p.pricePerG)}<small>per gram</small></div>`;
   const grade = p.grade ? `<span class="grade">${p.grade}</span>` : "";
+  const imgClass = p.tag === "Greenhouse" ? "gh" : p.tag === "Indoor" ? "in" : p.tag === "Edibles" ? "ed" : "cb";
 
   return `
     <article class="card" data-id="${p.id}">
-      <div class="card-img ${p.tag === "Greenhouse" ? "gh" : p.tag === "Indoor" ? "in" : p.tag === "Edibles" ? "ed" : "cb"}">
+      <div class="card-img ${imgClass}">
         <span class="badge">${p.tag}</span>
         ${grade}
-        <span>${icon}</span>
+        <img class="card-photo" src="images/${p.id}.jpg" alt="${p.name}" loading="lazy" />
       </div>
       <div class="card-body">
         <div class="card-range">${p.range}</div>

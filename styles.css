@@ -110,13 +110,16 @@ body {
 }
 .card:hover { box-shadow: 0 6px 18px rgba(0,0,0,.10); transform: translateY(-2px); }
 .card-img {
-  height: 150px; display: flex; align-items: center; justify-content: center;
-  font-size: 46px; position: relative;
+  height: 160px; position: relative; overflow: hidden;
+  background: #f0f0f0;
 }
 .card-img.gh { background: linear-gradient(135deg,#eafbe7,#cdeccb); }
 .card-img.in { background: linear-gradient(135deg,#efe7fb,#d9c9f2); }
 .card-img.ed { background: linear-gradient(135deg,#fff4e0,#ffe2b8); }
 .card-img.cb { background: linear-gradient(135deg,#e6f3ff,#c4e2ff); }
+.card-photo {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
 .badge {
   position: absolute; top: 8px; left: 8px;
   font-size: 10px; font-weight: 800; text-transform: uppercase;
