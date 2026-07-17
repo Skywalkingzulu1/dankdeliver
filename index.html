@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DankDeliver — Delivered in 60 Minutes</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-mark">DANK</span><span class="brand-deliver">DELIVER</span>
+      </div>
+      <button class="location" id="locationBtn">
+        <span class="loc-pin">📍</span>
+        <span class="loc-text">Delivering to <strong>Miracle Straat</strong></span>
+        <span class="loc-chev">▾</span>
+      </button>
+      <div class="account">
+        <span class="acct-icon">👤</span>
+        <span>Sign In</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Dank delivered in <span class="hero-min">60 minutes</span></h1>
+      <p class="hero-sub">Premium greenhouse &amp; indoor flower, edibles and CBD — same in-store quality, dropped at your door.</p>
+      <div class="search">
+        <span class="search-icon">🔍</span>
+        <input id="searchInput" type="text" placeholder="Search strains, edibles, CBD…" />
+      </div>
+    </div>
+  </section>
+
+  <nav class="cats" id="cats"></nav>
+
+  <main class="container">
+    <div id="sections"></div>
+  </main>
+
+  <div class="cart-dock" id="cartDock">
+    <div class="cart-info">
+      <span class="cart-count" id="cartCount">0 items</span>
+      <span class="cart-total" id="cartTotal">R0.00</span>
+    </div>
+    <button class="checkout-btn" id="checkoutBtn" disabled>Checkout</button>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
